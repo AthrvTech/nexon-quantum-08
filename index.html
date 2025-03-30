@@ -3,32 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekatruth</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <title>Ekatruth - Unveiling the Truth</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo">Ekatruth</div>
+        <h1>Ekatruth - Unveiling the Truth</h1>
         <nav>
-            <ul class="nav-links">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul id="menu">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="#">About</a></li>
                 <li><a href="#">Investigations</a></li>
-                <li><a href="#">Report a Case</a></li>
+                <li><a href="report.html">Report a Case</a></li>
+                <li><a href="#">Blog</a></li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-            <div class="menu-toggle">&#9776;</div>
         </nav>
     </header>
-    
+
     <main>
         <section class="hero">
-            <h1>Unveiling the Truth, One Case at a Time</h1>
-            <p>Your trusted platform for exposing corruption, crimes, and injustice.</p>
-            <a href="report.html" class="btn">Report a Case</a>
+            <h2>Investigate. Expose. Secure.</h2>
+            <a href="report.html"><button>Report a Case</button></a>
+        </section>
+
+        <section class="blogs">
+            <h2>Latest Blogs</h2>
+            <article>
+                <h3>Blog Title 1</h3>
+                <p>Short description of the blog...</p>
+            </article>
+            <article>
+                <h3>Blog Title 2</h3>
+                <p>Short description of the blog...</p>
+            </article>
         </section>
     </main>
+
+    <footer>
+        <p>© 2025 Ekatruth. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
