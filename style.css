@@ -1,87 +1,105 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    overflow-x: hidden; /* Zoom in karne pe design shift nahi hoga */
 }
 
 header {
-    background-color: #333;
-    padding: 10px;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
+    background: #222;
+    color: white;
 }
 
-.menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-    display: none;
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.nav-links {
+    list-style: none;
     display: flex;
+    gap: 20px;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
+.nav-links li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+}
+
+.menu-toggle {
+    font-size: 2em;
+    display: none;
+    cursor: pointer;
+}
+
+/* Report Page Styling */
+.report-form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.report-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.report-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.report-form input,
+.report-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.report-form button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-    nav ul {
+    .nav-links {
         display: none;
         flex-direction: column;
         background: #333;
         position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        text-align: center;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
     }
-    nav ul.show {
+
+    .nav-links.active {
         display: flex;
     }
-    nav ul li {
-        margin: 10px 0;
+
+    .menu-toggle {
+        display: block;
     }
-}
-
-.hero {
-    padding: 50px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.blogs {
-    background: white;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
